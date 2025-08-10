@@ -2,11 +2,15 @@
 @use "./fonts.scss";
 
 $black: #03090e;
+$lighter-gray: #dfdfdf;
+$light-gray: #404147;
 $gray: #353b40;
 $white: #fefefe;
 $border-nav: 2px solid $gray;
 $border-radius: 20px;
 $rounded-full: 999px;
+$rounded-cover-song: 5px;
+$width-button: 3rem;
 
 body {
   background-image: url("../assets/img/tyler-lastovich-R3ug0_IU64M-unsplash\ 1.png");
@@ -17,10 +21,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
   font-family: "Gotham", Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  // font-weight: 500;
   font-size: 1.5rem;
   color: $white;
+  margin: 0 3rem;
 }
 
 .header {
@@ -41,7 +47,7 @@ body {
     background: #03090e;
 
     &-spotify {
-      width: 75%;
+      width: 70%;
     }
 
     &-icon {
@@ -61,20 +67,42 @@ body {
   }
 }
 
+main {
+  max-width: 1600px;
+  width: 100%;
+}
+
 .dashboard {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2.5rem;
   background: rgba(53, 59, 64, 0.5);
+  backdrop-filter: blur(10px);
   padding: 4rem;
+  border: $border-nav;
+  border-radius: 60px;
 
   .container {
-    background: rgba(3, 9, 14, 0.5);
+    background: rgba(3, 9, 14, 0.2);
     border-radius: $border-radius;
     padding: 1.5rem;
   }
 
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 1rem;
+    // font-weight: 500;
+  }
+
   .menu {
+    grid-column: 1 / span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
     &-profile {
       display: flex;
       align-items: center;
@@ -93,44 +121,272 @@ body {
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
+        font-size: 1.25rem;
 
         &-nickname {
         }
         &-fullname {
+          color: $lighter-gray;
         }
       }
     }
 
     &-library {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
       &-header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
 
         &-title {
           display: flex;
           align-items: center;
+          gap: 1rem;
+
+          &-icon {
+            width: 3rem;
+          }
+
+          h2 {
+            font-size: 1.5rem;
+          }
+        }
+
+        &-actions {
+          display: flex;
+
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: $width-button;
+            aspect-ratio: 1;
+
+            img {
+              width: 75%;
+            }
+          }
         }
       }
       &-tags {
         display: flex;
         gap: 0.5rem;
+
+        li {
+          background: $light-gray;
+          padding: 0.5rem 0.75rem;
+          border-radius: 20px;
+          font-size: 1rem;
+        }
       }
       &-filters {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+        &-search {
+          width: $width-button;
+        }
+
+        &-select {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: $width-button;
+          }
+        }
       }
       &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
         &-item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
           &-img {
+            width: 3rem;
+            aspect-ratio: 1;
+            border-radius: $rounded-cover-song;
           }
           &-informations {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 1rem;
+
             &-title {
             }
             &-author {
+              color: $lighter-gray;
             }
           }
         }
       }
+    }
+  }
+
+  .playlist {
+    grid-column: 4 / span 6;
+    padding-left: 0;
+    padding-right: 0;
+
+    &-nav {
+      display: flex;
+      gap: 1rem;
+      padding: 0 1.5rem 1.5rem;
+
+      &-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $light-gray;
+        width: $width-button;
+        aspect-ratio: 1;
+        border-radius: $rounded-full;
+
+        img {
+          // width: $width-button;
+        }
+      }
+    }
+
+    &-hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.75rem;
+      font-size: 1rem;
+      font-weight: 500;
+      background: red;
+      padding: 1.5rem;
+      // min-height: 18rem;
+      aspect-ratio: 3 / 1;
+      background-image: url("../assets/img/einaudi-hero.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &-verified {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+
+      &-monthly {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      &-actions {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-weight: 500;
+          border-radius: $rounded-full;
+          font-size: 1rem;
+          min-width: 6rem;
+          min-height: 3rem;
+        }
+        &-play {
+          gap: 0.25rem;
+          background: $white;
+          color: $black;
+          padding: 0.5rem 1.25rem 0.5rem 0.75rem;
+        }
+        &-follow {
+          background: $black;
+          color: $white;
+          border: 2px solid $white;
+        }
+      }
+    }
+
+    &-content {
+      padding: 1.5rem;
+
+      &-popular {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        &-list {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          &-item {
+            display: flex;
+            align-items: center;
+
+            &-position {
+              font-size: 1.25rem;
+              margin-right: 1rem;
+            }
+            &-informations {
+              flex: 1;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+
+              img {
+                width: 3rem;
+                aspect-ratio: 1;
+                border-radius: $rounded-cover-song;
+              }
+            }
+            &-listens {
+              font-size: 1rem;
+              width: 22%;
+              text-align: center;
+            }
+            &-like {
+              width: 5%;
+            }
+            &-duration {
+              font-size: 1rem;
+              width: 8%;
+              text-align: center;
+            }
+            &-menu {
+              width: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .related {
+    grid-column: 10 / span 3;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.125rem;
     }
   }
 }

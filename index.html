@@ -32,7 +32,7 @@
         </button>
         <button class="header-button">
           <img
-            src="./src/assets/icons/library-outlined.svg"
+            src="./src/assets/icons/library-outlined-white.svg"
             alt=""
             class="header-button-icon"
           />
@@ -61,16 +61,20 @@
           <div class="menu-library container">
             <div class="menu-library-header">
               <div class="menu-library-header-title">
-                <img src="./src/assets/icons/library-outlined.svg" alt="" />
+                <img
+                  src="./src/assets/icons/library-outlined-white.svg"
+                  alt=""
+                  class="menu-library-header-title-icon"
+                />
                 <h2>Your Library</h2>
               </div>
               <div class="menu-library-header-actions">
                 <button>
-                  <img src="./src/assets/icons/add-filled.svg" alt="" />
+                  <img src="./src/assets/icons/add-filled-gray.svg" alt="" />
                 </button>
                 <button>
                   <img
-                    src="./src/assets/icons/arrow-forward-filled.svg"
+                    src="./src/assets/icons/arrow-forward-filled-gray.svg"
                     alt=""
                   />
                 </button>
@@ -81,21 +85,32 @@
               <li>Relaxing</li>
             </ul>
             <div class="menu-library-filters">
-              <img src="./src/assets/icons/search-outlined.svg" alt="" />
-              <div>
+              <img
+                src="./src/assets/icons/search-outlined-white.svg"
+                alt=""
+                class="menu-library-filters-search"
+              />
+              <div class="menu-library-filters-select">
                 <span>Recent</span>
-                <img src="./src/assets/icons/arrow-down-filled.svg" alt="" />
+                <img
+                  src="./src/assets/icons/arrow-down-ios-filled-white.svg"
+                  alt=""
+                />
               </div>
             </div>
             <ul class="menu-library-list">
               <li class="menu-library-list-item">
-                <img src="" alt="" class="menu-library-list-item-img" />
+                <img
+                  src="./src/assets/img/thumbnails/flora-cover.jpg"
+                  alt=""
+                  class="menu-library-list-item-img"
+                />
                 <div class="menu-library-list-item-informations">
                   <span class="menu-library-list-item-informations-title"
-                    >Stangers</span
+                    >Flora</span
                   >
                   <span class="menu-library-list-item-informations-author"
-                    >Kenya Grace</span
+                    >Ludovico Einaudi</span
                   >
                 </div>
               </li>
@@ -104,50 +119,237 @@
         </div>
         <div class="playlist container">
           <div class="playlist-nav">
-            <button class="playlist-nav-button"></button>
-            <button class="playlist-nav-button"></button>
+            <button class="playlist-nav-button">
+              <img
+                src="./src/assets/icons/arrow-back-ios-filled-white.svg"
+                alt=""
+              />
+            </button>
+            <button class="playlist-nav-button">
+              <img
+                src="./src/assets/icons/arrow-forward-ios-filled-white.svg"
+                alt=""
+              />
+            </button>
           </div>
           <div class="playlist-hero">
-            <div>
-              <img src="./src/assets/icons/verified-outlined.svg" alt="" />
+            <div class="playlist-hero-verified">
+              <img
+                src="./src/assets/icons/verified-outlined-white.svg"
+                alt=""
+              />
               <span>Verified Account</span>
             </div>
             <h1>Billie Eilish</h1>
-            <div>
-              <img src="" alt="" /><span>71,478,975 Monthly Listener</span>
+            <div class="playlist-hero-monthly">
+              <img src="./src/assets/icons/headset-outlined-white.svg" alt="" />
+              <span>71,478,975 Monthly Listener</span>
             </div>
-            <div>
-              <button>
+            <div class="playlist-hero-actions">
+              <button class="playlist-hero-actions-play">
                 <img src="./src/assets/icons/play-filled.svg" alt="" />
                 <span>Play</span>
               </button>
-              <button>Follow</button>
+              <button class="playlist-hero-actions-follow">Follow</button>
             </div>
           </div>
           <div class="playlist-content">
             <div class="playlist-content-popular">
               <h2>Populars</h2>
-              <ul>
-                <li>
-                  <span>1</span>
-                  <div>
-                    <img src="" alt="" />
-                    <h3>No time to die</h3>
+              <ul class="playlist-content-popular-list">
+                <li class="playlist-content-popular-list-item">
+                  <span class="playlist-content-popular-list-item-position"
+                    >1</span
+                  >
+                  <div class="playlist-content-popular-list-item-informations">
+                    <img
+                      src="./src/assets/img/thumbnails/flora-cover.jpg"
+                      alt=""
+                    />
+                    <h3>Flora</h3>
                   </div>
-                  <span>177,922,797</span>
-                  <button>
-                    <img src="" alt="" />
+                  <span class="playlist-content-popular-list-item-listens"
+                    >177,922,797</span
+                  >
+                  <button class="playlist-content-popular-list-item-like">
+                    <img
+                      src="./src/assets/icons/add-circle-outlined-white.svg"
+                      alt=""
+                    />
                   </button>
-                  <span>3:42</span>
-                  <button>
-                    <img src="" alt="" />
+                  <span class="playlist-content-popular-list-item-duration"
+                    >3:42</span
+                  >
+                  <button class="playlist-content-popular-list-item-menu">
+                    <img
+                      src="./src/assets/icons/more-horiz-outlined-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </li>
+                <li class="playlist-content-popular-list-item">
+                  <span class="playlist-content-popular-list-item-position"
+                    >2</span
+                  >
+                  <div class="playlist-content-popular-list-item-informations">
+                    <img
+                      src="./src/assets/img/thumbnails/flora-cover.jpg"
+                      alt=""
+                    />
+                    <h3>Rolling like a Ball</h3>
+                  </div>
+                  <span class="playlist-content-popular-list-item-listens"
+                    >177,922,797</span
+                  >
+                  <button class="playlist-content-popular-list-item-like">
+                    <img
+                      src="./src/assets/icons/add-circle-outlined-white.svg"
+                      alt=""
+                    />
+                  </button>
+                  <span class="playlist-content-popular-list-item-duration"
+                    >3:42</span
+                  >
+                  <button class="playlist-content-popular-list-item-menu">
+                    <img
+                      src="./src/assets/icons/more-horiz-outlined-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </li>
+                <li class="playlist-content-popular-list-item">
+                  <span class="playlist-content-popular-list-item-position"
+                    >3</span
+                  >
+                  <div class="playlist-content-popular-list-item-informations">
+                    <img
+                      src="./src/assets/img/thumbnails/flora-cover.jpg"
+                      alt=""
+                    />
+                    <h3>Almost June</h3>
+                  </div>
+                  <span class="playlist-content-popular-list-item-listens"
+                    >177,922,797</span
+                  >
+                  <button class="playlist-content-popular-list-item-like">
+                    <img
+                      src="./src/assets/icons/add-circle-outlined-white.svg"
+                      alt=""
+                    />
+                  </button>
+                  <span class="playlist-content-popular-list-item-duration"
+                    >3:42</span
+                  >
+                  <button class="playlist-content-popular-list-item-menu">
+                    <img
+                      src="./src/assets/icons/more-horiz-outlined-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </li>
+                <li class="playlist-content-popular-list-item">
+                  <span class="playlist-content-popular-list-item-position"
+                    >4</span
+                  >
+                  <div class="playlist-content-popular-list-item-informations">
+                    <img
+                      src="./src/assets/img/thumbnails/flora-cover.jpg"
+                      alt=""
+                    />
+                    <h3>Underwater</h3>
+                  </div>
+                  <span class="playlist-content-popular-list-item-listens"
+                    >177,922,797</span
+                  >
+                  <button class="playlist-content-popular-list-item-like">
+                    <img
+                      src="./src/assets/icons/add-circle-outlined-white.svg"
+                      alt=""
+                    />
+                  </button>
+                  <span class="playlist-content-popular-list-item-duration"
+                    >3:42</span
+                  >
+                  <button class="playlist-content-popular-list-item-menu">
+                    <img
+                      src="./src/assets/icons/more-horiz-outlined-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </li>
+                <li class="playlist-content-popular-list-item">
+                  <span class="playlist-content-popular-list-item-position"
+                    >5</span
+                  >
+                  <div class="playlist-content-popular-list-item-informations">
+                    <img
+                      src="./src/assets/img/thumbnails/flora-cover.jpg"
+                      alt=""
+                    />
+                    <h3>Natural Light</h3>
+                  </div>
+                  <span class="playlist-content-popular-list-item-listens"
+                    >177,922,797</span
+                  >
+                  <button class="playlist-content-popular-list-item-like">
+                    <img
+                      src="./src/assets/icons/add-circle-outlined-white.svg"
+                      alt=""
+                    />
+                  </button>
+                  <span class="playlist-content-popular-list-item-duration"
+                    >3:42</span
+                  >
+                  <button class="playlist-content-popular-list-item-menu">
+                    <img
+                      src="./src/assets/icons/more-horiz-outlined-white.svg"
+                      alt=""
+                    />
                   </button>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="related container"></div>
+        <div class="related container">
+          <div class="related-header">
+            <span>Ludovico Einaudi Mix</span>
+            <img src="./src/assets/icons/close-outlined-white.svg" alt="" />
+          </div>
+          <ul class="related-list">
+            <li class="related-list-item">
+              <img
+                src="./src/assets/img/thumbnails/flora-cover.jpg"
+                alt=""
+                class="related-list-item-img"
+              />
+              <div class="related-list-item-informations">
+                <div class="related-list-item-informations-content">
+                  <span class="related-list-item-informations-content-title"
+                    >Flora</span
+                  >
+                  <span class="related-list-item-informations-content-author"
+                    >Ludovico Einaudi</span
+                  >
+                </div>
+                <div class="related-list-item-informations-actions">
+                  <button class="related-list-item-informations-actions-like">
+                    <img
+                      src="./src/assets/icons/add-circle-outlined-white.svg"
+                      alt=""
+                    />
+                  </button>
+                  <button class="related-list-item-informations-actions-menu">
+                    <img
+                      src="./src/assets/icons/more-horiz-outlined-white.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="player"></section>
     </main>
