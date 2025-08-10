@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="header-button">
+        <img
+          src="./src/assets/img/logo-spotify.webp"
+          alt=""
+          class="header-button-spotify"
+        />
+      </button>
+      <nav class="header-nav">
+        <button class="header-button">
+          <img
+            src="./src/assets/icons/home-outlined.svg"
+            alt=""
+            class="header-button-icon"
+          />
+        </button>
+        <button class="header-button">
+          <img
+            src="./src/assets/icons/search-outlined.svg"
+            alt=""
+            class="header-button-icon"
+          />
+        </button>
+        <button class="header-button">
+          <img
+            src="./src/assets/icons/library-outlined.svg"
+            alt=""
+            class="header-button-icon"
+          />
+        </button>
+        <button class="header-button">
+          <img
+            src="./src/assets/icons/notification-outlined.svg"
+            alt=""
+            class="header-button-icon"
+          />
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="dashboard">
+        <div class="menu">
+          <div class="menu-profile container">
+            <div class="menu-profile-badge">Q</div>
+            <div class="menu-profile-informations">
+              <span class="menu-profile-informations-nickname">Beuks34</span>
+              <span class="menu-profile-informations-fullname"
+                >Quentin Luback</span
+              >
+            </div>
+          </div>
+          <div class="menu-library container">
+            <div class="menu-library-header">
+              <div class="menu-library-header-title">
+                <img src="./src/assets/icons/library-outlined.svg" alt="" />
+                <h2>Your Library</h2>
+              </div>
+              <div class="menu-library-header-actions">
+                <button>
+                  <img src="./src/assets/icons/add-filled.svg" alt="" />
+                </button>
+                <button>
+                  <img
+                    src="./src/assets/icons/arrow-forward-filled.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+            <ul class="menu-library-tags">
+              <li>Playlist</li>
+              <li>Relaxing</li>
+            </ul>
+            <div class="menu-library-filters">
+              <img src="./src/assets/icons/search-outlined.svg" alt="" />
+              <div>
+                <span>Recent</span>
+                <img src="./src/assets/icons/arrow-down-filled.svg" alt="" />
+              </div>
+            </div>
+            <ul class="menu-library-list">
+              <li class="menu-library-list-item">
+                <img src="" alt="" class="menu-library-list-item-img" />
+                <div class="menu-library-list-item-informations">
+                  <span class="menu-library-list-item-informations-title"
+                    >Stangers</span
+                  >
+                  <span class="menu-library-list-item-informations-author"
+                    >Kenya Grace</span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="playlist container">
+          <div class="playlist-nav">
+            <button class="playlist-nav-button"></button>
+            <button class="playlist-nav-button"></button>
+          </div>
+          <div class="playlist-hero">
+            <div>
+              <img src="./src/assets/icons/verified-outlined.svg" alt="" />
+              <span>Verified Account</span>
+            </div>
+            <h1>Billie Eilish</h1>
+            <div>
+              <img src="" alt="" /><span>71,478,975 Monthly Listener</span>
+            </div>
+            <div>
+              <button>
+                <img src="./src/assets/icons/play-filled.svg" alt="" />
+                <span>Play</span>
+              </button>
+              <button>Follow</button>
+            </div>
+          </div>
+          <div class="playlist-content">
+            <div class="playlist-content-popular">
+              <h2>Populars</h2>
+              <ul>
+                <li>
+                  <span>1</span>
+                  <div>
+                    <img src="" alt="" />
+                    <h3>No time to die</h3>
+                  </div>
+                  <span>177,922,797</span>
+                  <button>
+                    <img src="" alt="" />
+                  </button>
+                  <span>3:42</span>
+                  <button>
+                    <img src="" alt="" />
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="related container"></div>
+      </section>
+      <section class="player"></section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
