@@ -1,0 +1,137 @@
+@use "./variables.scss" as *;
+
+::-webkit-scrollbar {
+  width: 8px; /* Scrollbar width */
+  height: 8px; /* For horizontal scrollbars */
+  margin-left: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Track background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4); /* Scroll thumb color */
+  border-radius: 9999px; /* Fully rounded */
+  border: 2px solid transparent; /* Space between thumb and track */
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* Darker on hover */
+}
+
+.button {
+  &-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    border-radius: $rounded-full;
+    font-size: 1rem;
+    min-width: 6rem;
+    min-height: 3rem;
+    background: $white;
+    color: $black;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    border-radius: $rounded-full;
+    font-size: 1rem;
+    min-width: 6rem;
+    min-height: 3rem;
+    background: $black;
+    color: $white;
+    border: 2px solid $white;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &--transparent {
+      background: transparent;
+      color: $lighter-gray;
+      border: none;
+    }
+
+    &--small {
+      font-size: 0.9rem;
+      min-height: unset;
+      min-width: unset;
+
+      &:hover {
+        text-decoration: underline;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $light-gray;
+    width: $width-button;
+    aspect-ratio: 1;
+    border-radius: $rounded-full;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: $light-gray-hover;
+    }
+
+    &--transparent {
+      background: transparent;
+      position: relative;
+
+      &:hover {
+        background: none;
+        transform: scale(1.05);
+
+        .button-icon-hovered-img {
+          opacity: 1;
+        }
+      }
+
+      .button-icon-hovered-img {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    &--small {
+      width: auto;
+    }
+  }
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+
+  &-item {
+    background: $light-gray;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: $light-gray-hover;
+    }
+  }
+}
