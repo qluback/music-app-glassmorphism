@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
   </head>
-  <body class="hidden">
+  <body class="">
     <header class="header">
       <button class="header-button header-button-spotify">
         <img
@@ -779,7 +779,151 @@
           </ul>
         </div>
       </section>
-      <section class="player"></section>
+      <section class="player">
+        <div class="player-music">
+          <img
+            src="./src/assets/img/thumbnails/in-a-time-lapse-cover.jpg"
+            alt=""
+            class="player-music-img"
+          />
+          <div class="player-music-informations">
+            <span class="player-music-informations-title">Experience</span>
+            <span class="player-music-informations-author"
+              >Ludovico Einaudi</span
+            >
+          </div>
+        </div>
+        <div class="player-controls">
+          <div class="player-controls-actions">
+            <button
+              class="button-icon button-icon--small button-icon--transparent player-controls-actions-btn"
+            >
+              <img src="./src/assets/icons/shuffle-filled-white.svg" alt="" />
+              <img
+                src="./src/assets/icons/shuffle-filled-white.svg"
+                alt=""
+                class="button-icon-hovered-img"
+              />
+            </button>
+            <button
+              class="button-icon button-icon--small button-icon--transparent player-controls-actions-btn player-controls-actions-btn--medium"
+            >
+              <img
+                src="./src/assets/icons/skip-previous-filled-white.svg"
+                alt=""
+              />
+              <img
+                src="./src/assets/icons/skip-previous-filled-white.svg"
+                alt=""
+                class="button-icon-hovered-img"
+              />
+            </button>
+            <button
+              class="button-icon button-icon--small button-icon--transparent player-controls-actions-btn player-controls-actions-btn--large"
+            >
+              <img
+                src="./src/assets/icons/play-circle-filled-white.svg"
+                alt=""
+              />
+              <img
+                src="./src/assets/icons/play-circle-filled-white.svg"
+                alt=""
+                class="button-icon-hovered-img"
+              />
+            </button>
+            <button
+              class="button-icon button-icon--small button-icon--transparent player-controls-actions-btn player-controls-actions-btn--large"
+            >
+              <img
+                src="./src/assets/icons/pause-circle-filled-white.svg"
+                alt=""
+              />
+              <img
+                src="./src/assets/icons/pause-circle-filled-white.svg.svg"
+                alt=""
+                class="button-icon-hovered-img"
+              />
+            </button>
+            <button
+              class="button-icon button-icon--small button-icon--transparent player-controls-actions-btn player-controls-actions-btn--medium"
+            >
+              <img src="./src/assets/icons/skip-next-filled-white.svg" alt="" />
+              <img
+                src="./src/assets/icons/skip-next-filled-white.svg"
+                alt=""
+                class="button-icon-hovered-img"
+              />
+            </button>
+            <button
+              class="button-icon button-icon--small button-icon--transparent player-controls-actions-btn"
+            >
+              <img src="./src/assets/icons/replay-filled-white.svg" alt="" />
+              <img
+                src="./src/assets/icons/replay-filled-white.svg"
+                alt=""
+                class="button-icon-hovered-img"
+              />
+            </button>
+          </div>
+          <div class="player-controls-progress">
+            <span class="player-controls-progress-start">1:00</span>
+            <div class="player-controls-progress-bar"></div>
+            <span class="player-controls-progress-end">5:15</span>
+          </div>
+        </div>
+        <div class="player-deviceControls">
+          <button
+            class="button-icon button-icon--small button-icon--transparent"
+          >
+            <img src="./src/assets/icons/video-library-filled-white.svg" alt="" />
+            <img
+              src="./src/assets/icons/video-library-filled-white.svg"
+              alt=""
+              class="button-icon-hovered-img"
+            />
+          </button>
+          <button
+            class="button-icon button-icon--small button-icon--transparent"
+          >
+            <img src="./src/assets/icons/horizontal-split-filled-white.svg" alt="" />
+            <img
+              src="./src/assets/icons/horizontal-split-filled-white.svg"
+              alt=""
+              class="button-icon-hovered-img"
+            />
+          </button>
+          <button
+            class="button-icon button-icon--small button-icon--transparent"
+          >
+            <img src="./src/assets/icons/speaker-group-filled-white.svg" alt="" />
+            <img
+              src="./src/assets/icons/speaker-group-filled-white.svg"
+              alt=""
+              class="button-icon-hovered-img"
+            />
+          </button>
+          <button
+            class="button-icon button-icon--small button-icon--transparent"
+          >
+            <img src="./src/assets/icons/volume-up-filled-white.svg" alt="" />
+            <img
+              src="./src/assets/icons/volume-up-filled-white.svg"
+              alt=""
+              class="button-icon-hovered-img"
+            />
+          </button>
+          <button
+            class="button-icon button-icon--small button-icon--transparent"
+          >
+            <img src="./src/assets/icons/full-screen-filled-white.svg" alt="" />
+            <img
+              src="./src/assets/icons/full-screen-filled-white.svg"
+              alt=""
+              class="button-icon-hovered-img"
+            />
+          </button>
+        </div>
+      </section>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
