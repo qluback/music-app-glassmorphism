@@ -151,8 +151,9 @@ main {
   gap: 2.5rem;
   background: rgba(53, 59, 64, 0.5);
   backdrop-filter: blur(10px);
-  padding: 4rem;
+  padding: 4rem 4rem 0;
   border: $border-nav;
+  border-bottom: none;
   border-radius: 60px 60px 0 0;
   transition: all 0.5s ease;
   width: 100%;
@@ -169,7 +170,7 @@ main {
 
   .container {
     background: rgba(3, 9, 14, 0.2);
-    border-radius: $rounded-container;
+    border-radius: $rounded-container $rounded-container 0 0;
     padding: 1.5rem;
   }
 
@@ -197,6 +198,7 @@ main {
       display: flex;
       align-items: center;
       gap: 1rem;
+      border-radius: $rounded-container;
 
       &-badge {
         background-color: #eda35a;
@@ -290,14 +292,65 @@ main {
           }
 
           &-select {
+            position: relative;
             display: flex;
             align-items: center;
-            font-size: 1.125rem;
-            cursor: pointer;
+            height: 100%;
 
-            img {
-              width: 70%;
-              // width: $width-button;
+            button {
+              display: flex;
+              align-items: center;
+              font-size: 1.125rem;
+              cursor: pointer;
+              color: $white;
+              height: 100%;
+
+              img {
+                width: 70%;
+                // width: $width-button;
+              }
+            }
+            &-options {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              top: 3rem;
+              right: 0;
+              background: #525252;
+              width: 14rem;
+              padding-bottom: 0.25rem;
+
+              &-title {
+                color: $lighter-gray;
+                font-size: 0.9rem;
+                padding: 1rem;
+              }
+              &-list {
+                &-item {
+                  padding: 0 1rem;
+                  font-size: 1rem;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  height: 2.5rem;
+                  cursor: pointer;
+
+                  &.active {
+                    color: $green;
+                  }
+
+                  transition: background 0.3s ease;
+
+                  &:hover {
+                    background: rgba(47, 51, 54, 1);
+                  }
+
+                  span {
+                  }
+                  img {
+                  }
+                }
+              }
             }
           }
         }
@@ -361,7 +414,7 @@ main {
     padding-left: 0;
     padding-right: 0;
     overflow: auto;
-    clip-path: inset(0 round 20px);
+    clip-path: inset(0 round 20px 20px 0 0);
 
     &-nav {
       display: flex;
@@ -704,6 +757,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 
     &-actions {
       display: flex;
@@ -752,7 +806,19 @@ main {
         flex: 1;
         height: 8px;
         border-radius: $rounded-full;
-        background: red;
+        background: black;
+        position: relative;
+
+        &:before {
+          content: "";
+          background: $lighter-gray;
+          width: 19%;
+          height: 8px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: $rounded-full;
+        }
       }
     }
   }
