@@ -19,6 +19,75 @@ body {
   color: $white;
   margin: 0 3rem;
   transition: background-position 0.2s ease-out;
+
+  @media (max-width: 1440px) {
+    gap: 1rem;
+    margin: 0 1rem;
+  }
+
+  &:not(.hidden) {
+    main {
+      transition: max-width 2s ease, max-height 2s ease;
+      .dashboard {
+        > * {
+          transform: scaleY(1);
+          transition: max-height 0.5s ease, opacity 0.3s ease 0.7s;
+          // transition: height 1s ease 5s, opacity 0s ease; /* no delay here */
+        }
+      }
+    }
+  }
+
+  &.hidden {
+    .header-nav {
+      display: none;
+    }
+    .header-button-spotify {
+      // animation: name duration timing-function delay iteration-count direction fill-mode;
+      animation: bounce-scale 3s ease infinite;
+    }
+
+    @keyframes bounce-scale {
+      0%,
+      20%,
+      50%,
+      80% {
+        transform: scale(1);
+      }
+      40% {
+        transform: scale(1.2);
+      }
+      60% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1); /* pause state */
+      }
+    }
+
+    main {
+      max-width: 0;
+      max-height: 0;
+      opacity: 0;
+      transition: max-width 1s ease 0.3s, max-height 1s ease 0.3s,
+        opacity 0.3s ease;
+
+      .dashboard {
+        width: 6rem;
+        height: 6rem;
+        border-radius: $rounded-full;
+        gap: 0;
+        padding: 0;
+        > * {
+          // max-height: 0;
+          transform: scaleY(0);
+          opacity: 0;
+          transition: transform 0s ease 3s;
+          // transition: height 1s ease 5s, opacity 0s ease; /* no delay here */
+        }
+      }
+    }
+  }
 }
 
 .header {
@@ -83,6 +152,17 @@ main {
   padding: 4rem;
   border: $border-nav;
   border-radius: 60px;
+  transition: all 0.5s ease;
+  width: 100%;
+
+  @media (max-width: 1600px) {
+    gap: 1rem;
+  }
+
+  > * {
+    // max-height: 100%;
+    // transition: max-height 1s ease, opacity 0.5s ease 1s;
+  }
 
   .container {
     background: rgba(3, 9, 14, 0.2);
@@ -106,6 +186,10 @@ main {
     gap: 3rem;
     overflow: auto;
 
+    @media (max-width: 1600px) {
+      gap: 1rem;
+    }
+
     &-profile {
       display: flex;
       align-items: center;
@@ -125,11 +209,23 @@ main {
         flex-direction: column;
         gap: 0.25rem;
         font-size: 1.25rem;
+        flex: 1;
+        min-width: 0;
 
         &-nickname {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
+          max-width: 100%;
         }
         &-fullname {
           color: $lighter-gray;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
+          max-width: 100%;
         }
       }
     }
@@ -262,6 +358,7 @@ main {
     padding-left: 0;
     padding-right: 0;
     overflow: auto;
+    clip-path: inset(0 round 20px);
 
     &-nav {
       display: flex;
@@ -297,6 +394,7 @@ main {
       background-image: url("../assets/img/einaudi-hero.png");
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: center;
 
       &-verified {
         display: flex;
@@ -377,12 +475,20 @@ main {
               width: 22%;
               text-align: right;
               padding-right: 1rem;
+
+              @media (max-width: 1440px) {
+                display: none;
+              }
             }
             &-like {
               width: 5%;
               display: flex;
               justify-content: center;
               align-items: center;
+
+              @media (max-width: 1440px) {
+                width: 8%;
+              }
             }
             &-duration {
               font-size: 1rem;
@@ -394,6 +500,10 @@ main {
               display: flex;
               justify-content: flex-end;
               align-items: center;
+
+              @media (max-width: 1440px) {
+                width: 8%;
+              }
             }
           }
         }
@@ -413,6 +523,7 @@ main {
           margin: 0 -0.75rem;
 
           &-item {
+            flex: 1;
             width: 10rem;
             display: flex;
             flex-direction: column;
@@ -421,6 +532,12 @@ main {
             padding: 0.75rem;
             border-radius: $rounded-cover-song;
             transition: background 0.3s ease;
+
+            &:nth-child(4) {
+              @media (max-width: 1600px) {
+                display: none;
+              }
+            }
 
             &:hover {
               background: rgba(47, 51, 54, 0.5);

@@ -19,3 +19,7 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
+document.querySelector(".header-button-spotify")?.addEventListener("click", () => {
+    document.querySelector("body")?.classList.toggle("hidden");
+})
