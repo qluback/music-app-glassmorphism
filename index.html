@@ -6,12 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music App Glassmorphism</title>
   </head>
-  <body class="">
+  <body class="hidden">
+    <style>
+      #preloader {
+        position: fixed;
+        inset: 0;
+        background-color: #03090e;
+        z-index: 999;
+        transition: opacity 0.3s ease;
+      }
+      #preloader.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+    <div id="preloader"></div>
+    <script type="module" src="/src/main.ts"></script>
     <header class="header">
       <button class="header-button header-button-spotify">
         <img
           src="./src/assets/img/logo-spotify.webp"
-          alt=""
+          alt="Spotify logo"
           class="header-button-spotify-img"
         />
       </button>
@@ -19,28 +34,28 @@
         <button class="header-button">
           <img
             src="./src/assets/icons/home-outlined-white.svg"
-            alt=""
+            alt="Home icon"
             class="header-button-icon"
           />
         </button>
         <button class="header-button">
           <img
             src="./src/assets/icons/search-outlined-white.svg"
-            alt=""
+            alt="Search icon"
             class="header-button-icon"
           />
         </button>
         <button class="header-button">
           <img
             src="./src/assets/icons/library-outlined-white.svg"
-            alt=""
+            alt="Library icon"
             class="header-button-icon"
           />
         </button>
         <button class="header-button">
           <img
             src="./src/assets/icons/notification-outlined-white.svg"
-            alt=""
+            alt="Notifications icon"
             class="header-button-icon"
           />
         </button>
@@ -64,31 +79,23 @@
                 <div class="menu-library-header-title-content">
                   <img
                     src="./src/assets/icons/library-outlined-white.svg"
-                    alt=""
+                    alt="Library icon"
                     class="menu-library-header-title-content-icon"
                   />
                   <h2>Library</h2>
                 </div>
                 <div class="menu-library-header-title-actions">
                   <button class="button-icon button-icon--transparent">
-                    <img src="./src/assets/icons/add-filled-gray.svg" alt="" />
+                    <img
+                      src="./src/assets/icons/add-filled-gray.svg"
+                      alt="Add new item (gray)"
+                    />
                     <img
                       src="./src/assets/icons/add-filled-white.svg"
-                      alt=""
+                      alt="Add new item (white)"
                       class="button-icon-hovered-img"
                     />
                   </button>
-                  <!-- <button class="button-icon button-icon--transparent">
-                    <img
-                      src="./src/assets/icons/arrow-forward-filled-gray.svg"
-                      alt=""
-                    />
-                    <img
-                      src="./src/assets/icons/arrow-forward-filled-white.svg"
-                      alt=""
-                      class="button-icon-hovered-img"
-                    />
-                  </button> -->
                 </div>
               </div>
               <ul class="tags">
@@ -101,7 +108,7 @@
                 >
                   <img
                     src="./src/assets/icons/search-outlined-white.svg"
-                    alt=""
+                    alt="Search icon"
                   />
                 </button>
                 <div class="menu-library-header-filters-select">
@@ -109,27 +116,50 @@
                     <span>Recent</span>
                     <img
                       src="./src/assets/icons/arrow-down-ios-filled-white.svg"
-                      alt=""
+                      alt="Arrow down icon"
                     />
                   </button>
                   <div class="menu-library-header-filters-select-options">
-                    <span class="menu-library-header-filters-select-options-title">Trier par</span>
+                    <span
+                      class="menu-library-header-filters-select-options-title"
+                      >Trier par</span
+                    >
                     <ul class="menu-library-header-filters-select-options-list">
-                      <li class="menu-library-header-filters-select-options-list-item active">
+                      <li
+                        class="menu-library-header-filters-select-options-list-item active"
+                      >
                         <span>Récents</span>
-                        <img src="./src/assets/icons/done-filled-green.svg" alt="">
+                        <img
+                          src="./src/assets/icons/done-filled-green.svg"
+                          alt="Check mark icon"
+                        />
                       </li>
-                      <li class="menu-library-header-filters-select-options-list-item">
+                      <li
+                        class="menu-library-header-filters-select-options-list-item"
+                      >
                         <span>Ajoutés récemment</span>
-                        <img src="./src/assets/icons/done-filled-green.svg" alt="">
+                        <img
+                          src="./src/assets/icons/done-filled-green.svg"
+                          alt="Check mark icon"
+                        />
                       </li>
-                      <li class="menu-library-header-filters-select-options-list-item">
+                      <li
+                        class="menu-library-header-filters-select-options-list-item"
+                      >
                         <span>Ordre alphabétique</span>
-                        <img src="./src/assets/icons/done-filled-green.svg" alt="">
+                        <img
+                          src="./src/assets/icons/done-filled-green.svg"
+                          alt="Check mark icon"
+                        />
                       </li>
-                      <li class="menu-library-header-filters-select-options-list-item">
+                      <li
+                        class="menu-library-header-filters-select-options-list-item"
+                      >
                         <span>Créateur</span>
-                        <img src="./src/assets/icons/done-filled-green.svg" alt="">
+                        <img
+                          src="./src/assets/icons/done-filled-green.svg"
+                          alt="Check mark icon"
+                        />
                       </li>
                     </ul>
                   </div>
@@ -139,8 +169,8 @@
             <ul class="menu-library-list">
               <li class="menu-library-list-item">
                 <img
-                  src="./src/assets/img/thumbnails/una-mattina-cover.jpg"
-                  alt=""
+                  src="./src/assets/img/thumbnails/una-mattina-cover.webp"
+                  alt="Album cover for Una Mattina"
                   class="menu-library-list-item-img"
                 />
                 <div class="menu-library-list-item-informations">
@@ -154,8 +184,8 @@
               </li>
               <li class="menu-library-list-item">
                 <img
-                  src="./src/assets/img/thumbnails/miedo-cover.jpg"
-                  alt=""
+                  src="./src/assets/img/thumbnails/miedo-cover.webp"
+                  alt="Album cover for Miedo"
                   class="menu-library-list-item-img"
                 />
                 <div class="menu-library-list-item-informations">
@@ -169,8 +199,8 @@
               </li>
               <li class="menu-library-list-item">
                 <img
-                  src="./src/assets/img/thumbnails/au-bord-du-temps-cover.jpg"
-                  alt=""
+                  src="./src/assets/img/thumbnails/au-bord-du-temps-cover.webp"
+                  alt="Album cover for Au bord du temps"
                   class="menu-library-list-item-img"
                 />
                 <div class="menu-library-list-item-informations">
@@ -184,8 +214,8 @@
               </li>
               <li class="menu-library-list-item">
                 <img
-                  src="./src/assets/img/thumbnails/the-conscience-loop-cover.jpg"
-                  alt=""
+                  src="./src/assets/img/thumbnails/the-conscience-loop-cover.webp"
+                  alt="Album cover for The Conscience Loop"
                   class="menu-library-list-item-img"
                 />
                 <div class="menu-library-list-item-informations">
@@ -199,8 +229,8 @@
               </li>
               <li class="menu-library-list-item">
                 <img
-                  src="./src/assets/img/thumbnails/behind-every-decision-cover.jpg"
-                  alt=""
+                  src="./src/assets/img/thumbnails/behind-every-decision-cover.webp"
+                  alt="Album cover for Behind Every Decision"
                   class="menu-library-list-item-img"
                 />
                 <div class="menu-library-list-item-informations">
@@ -214,8 +244,8 @@
               </li>
               <li class="menu-library-list-item">
                 <img
-                  src="./src/assets/img/thumbnails/underwater-cover.jpg"
-                  alt=""
+                  src="./src/assets/img/thumbnails/underwater-cover.webp"
+                  alt="Album cover for Atoms"
                   class="menu-library-list-item-img"
                 />
                 <div class="menu-library-list-item-informations">
@@ -229,8 +259,8 @@
               </li>
               <li class="menu-library-list-item">
                 <img
-                  src="./src/assets/img/thumbnails/chicago-cover.jpg"
-                  alt=""
+                  src="./src/assets/img/thumbnails/chicago-cover.webp"
+                  alt="Album cover for Chicago"
                   class="menu-library-list-item-img"
                 />
                 <div class="menu-library-list-item-informations">
@@ -244,8 +274,8 @@
               </li>
               <li class="menu-library-list-item">
                 <img
-                  src="./src/assets/img/thumbnails/jacob-and-the-stone-cover.jpg"
-                  alt=""
+                  src="./src/assets/img/thumbnails/jacob-and-the-stone-cover.webp"
+                  alt="Album cover for Jacob and the Stone"
                   class="menu-library-list-item-img"
                 />
                 <div class="menu-library-list-item-informations">
@@ -259,8 +289,8 @@
               </li>
               <li class="menu-library-list-item">
                 <img
-                  src="./src/assets/img/thumbnails/clair-de-lune-cover.jpg"
-                  alt=""
+                  src="./src/assets/img/thumbnails/clair-de-lune-cover.webp"
+                  alt="Album cover for Clair de lune L.75"
                   class="menu-library-list-item-img"
                 />
                 <div class="menu-library-list-item-informations">
@@ -280,13 +310,13 @@
             <button class="button-icon">
               <img
                 src="./src/assets/icons/arrow-back-ios-filled-white.svg"
-                alt=""
+                alt="Back arrow icon"
               />
             </button>
             <button class="button-icon">
               <img
                 src="./src/assets/icons/arrow-forward-ios-filled-white.svg"
-                alt=""
+                alt="Forward arrow icon"
               />
             </button>
           </div>
@@ -294,18 +324,24 @@
             <div class="playlist-hero-verified">
               <img
                 src="./src/assets/icons/verified-outlined-white.svg"
-                alt=""
+                alt="Verified account icon"
               />
               <span>Verified Account</span>
             </div>
             <h1>Ludovico Einaudi</h1>
             <div class="playlist-hero-monthly">
-              <img src="./src/assets/icons/headset-outlined-white.svg" alt="" />
+              <img
+                src="./src/assets/icons/headset-outlined-white.svg"
+                alt="Headset icon representing listeners"
+              />
               <span>8,776,157 Monthly Listener</span>
             </div>
             <div class="playlist-hero-actions">
               <button class="button-primary playlist-hero-actions-play">
-                <img src="./src/assets/icons/play-filled.svg" alt="" />
+                <img
+                  src="./src/assets/icons/play-filled.svg"
+                  alt="Play button icon"
+                />
                 <span>Play</span>
               </button>
               <button class="button-secondary">Follow</button>
@@ -321,8 +357,8 @@
                   >
                   <div class="playlist-content-popular-list-item-informations">
                     <img
-                      src="./src/assets/img/thumbnails/in-a-time-lapse-cover.jpg"
-                      alt=""
+                      src="./src/assets/img/thumbnails/in-a-time-lapse-cover.webp"
+                      alt="Album cover for Experience"
                     />
                     <h3>Experience</h3>
                   </div>
@@ -335,11 +371,11 @@
                     >
                       <img
                         src="./src/assets/icons/add-circle-outlined-gray.svg"
-                        alt=""
+                        alt="Add to playlist (gray)"
                       />
                       <img
                         src="./src/assets/icons/add-circle-outlined-white.svg"
-                        alt=""
+                        alt="Add to playlist (white)"
                         class="button-icon-hovered-img"
                       />
                     </button>
@@ -353,11 +389,11 @@
                     >
                       <img
                         src="./src/assets/icons/more-horiz-outlined-gray.svg"
-                        alt=""
+                        alt="More icon (gray)"
                       />
                       <img
                         src="./src/assets/icons/more-horiz-outlined-white.svg"
-                        alt=""
+                        alt="More icon (white)"
                         class="button-icon-hovered-img"
                       />
                     </button>
@@ -369,8 +405,8 @@
                   >
                   <div class="playlist-content-popular-list-item-informations">
                     <img
-                      src="./src/assets/img/thumbnails/una-mattina-cover.jpg"
-                      alt=""
+                      src="./src/assets/img/thumbnails/una-mattina-cover.webp"
+                      alt="Album cover for Nuvole Bianche"
                     />
                     <h3>Nuvole Bianche</h3>
                   </div>
@@ -383,11 +419,11 @@
                     >
                       <img
                         src="./src/assets/icons/add-circle-outlined-gray.svg"
-                        alt=""
+                        alt="Add to playlist (gray)"
                       />
                       <img
                         src="./src/assets/icons/add-circle-outlined-white.svg"
-                        alt=""
+                        alt="Add to playlist (white)"
                         class="button-icon-hovered-img"
                       />
                     </button>
@@ -401,11 +437,11 @@
                     >
                       <img
                         src="./src/assets/icons/more-horiz-outlined-gray.svg"
-                        alt=""
+                        alt="More icon (gray)"
                       />
                       <img
                         src="./src/assets/icons/more-horiz-outlined-white.svg"
-                        alt=""
+                        alt="More icon (white)"
                         class="button-icon-hovered-img"
                       />
                     </button>
@@ -417,8 +453,8 @@
                   >
                   <div class="playlist-content-popular-list-item-informations">
                     <img
-                      src="./src/assets/img/thumbnails/una-mattina-cover.jpg"
-                      alt=""
+                      src="./src/assets/img/thumbnails/una-mattina-cover.webp"
+                      alt="Album cover for Una Mattina"
                     />
                     <h3>Una Mattina</h3>
                   </div>
@@ -431,11 +467,11 @@
                     >
                       <img
                         src="./src/assets/icons/add-circle-outlined-gray.svg"
-                        alt=""
+                        alt="Add to playlist (gray)"
                       />
                       <img
                         src="./src/assets/icons/add-circle-outlined-white.svg"
-                        alt=""
+                        alt="Add to playlist (white)"
                         class="button-icon-hovered-img"
                       />
                     </button>
@@ -449,11 +485,11 @@
                     >
                       <img
                         src="./src/assets/icons/more-horiz-outlined-gray.svg"
-                        alt=""
+                        alt="More icon (gray)"
                       />
                       <img
                         src="./src/assets/icons/more-horiz-outlined-white.svg"
-                        alt=""
+                        alt="More icon (white)"
                         class="button-icon-hovered-img"
                       />
                     </button>
@@ -465,8 +501,8 @@
                   >
                   <div class="playlist-content-popular-list-item-informations">
                     <img
-                      src="./src/assets/img/thumbnails/divenire-cover.jpg"
-                      alt=""
+                      src="./src/assets/img/thumbnails/divenire-cover.webp"
+                      alt="Album cover for Primavera"
                     />
                     <h3>Primavera</h3>
                   </div>
@@ -479,11 +515,11 @@
                     >
                       <img
                         src="./src/assets/icons/add-circle-outlined-gray.svg"
-                        alt=""
+                        alt="Add to playlist (gray)"
                       />
                       <img
                         src="./src/assets/icons/add-circle-outlined-white.svg"
-                        alt=""
+                        alt="Add to playlist (white)"
                         class="button-icon-hovered-img"
                       />
                     </button>
@@ -497,11 +533,11 @@
                     >
                       <img
                         src="./src/assets/icons/more-horiz-outlined-gray.svg"
-                        alt=""
+                        alt="More icon (gray)"
                       />
                       <img
                         src="./src/assets/icons/more-horiz-outlined-white.svg"
-                        alt=""
+                        alt="More icon (white)"
                         class="button-icon-hovered-img"
                       />
                     </button>
@@ -513,8 +549,8 @@
                   >
                   <div class="playlist-content-popular-list-item-informations">
                     <img
-                      src="./src/assets/img/thumbnails/underwater-cover.jpg"
-                      alt=""
+                      src="./src/assets/img/thumbnails/underwater-cover.webp"
+                      alt="Album cover for Wind Song"
                     />
                     <h3>Wind Song</h3>
                   </div>
@@ -527,11 +563,11 @@
                     >
                       <img
                         src="./src/assets/icons/add-circle-outlined-gray.svg"
-                        alt=""
+                        alt="Add to playlist (gray)"
                       />
                       <img
                         src="./src/assets/icons/add-circle-outlined-white.svg"
-                        alt=""
+                        alt="Add to playlist (white)"
                         class="button-icon-hovered-img"
                       />
                     </button>
@@ -545,11 +581,11 @@
                     >
                       <img
                         src="./src/assets/icons/more-horiz-outlined-gray.svg"
-                        alt=""
+                        alt="More icon (gray)"
                       />
                       <img
                         src="./src/assets/icons/more-horiz-outlined-white.svg"
-                        alt=""
+                        alt="More icon (white)"
                         class="button-icon-hovered-img"
                       />
                     </button>
@@ -575,8 +611,8 @@
               <ul class="playlist-content-discography-list">
                 <li class="playlist-content-discography-list-item">
                   <img
-                    src="./src/assets/img/thumbnails/the-summer-portraits-cover.jpg"
-                    alt=""
+                    src="./src/assets/img/thumbnails/the-summer-portraits-cover.webp"
+                    alt="Album cover for The Summer Portraits"
                   />
                   <div
                     class="playlist-content-discography-list-item-informations"
@@ -593,8 +629,8 @@
                 </li>
                 <li class="playlist-content-discography-list-item">
                   <img
-                    src="./src/assets/img/thumbnails/in-a-time-lapse-cover.jpg"
-                    alt=""
+                    src="./src/assets/img/thumbnails/in-a-time-lapse-cover.webp"
+                    alt="Album cover for In A Time Lapse"
                   />
                   <div
                     class="playlist-content-discography-list-item-informations"
@@ -611,8 +647,8 @@
                 </li>
                 <li class="playlist-content-discography-list-item">
                   <img
-                    src="./src/assets/img/thumbnails/una-mattina-cover.jpg"
-                    alt=""
+                    src="./src/assets/img/thumbnails/una-mattina-cover.webp"
+                    alt="Album cover for Una Mattina"
                   />
                   <div
                     class="playlist-content-discography-list-item-informations"
@@ -629,8 +665,8 @@
                 </li>
                 <li class="playlist-content-discography-list-item">
                   <img
-                    src="./src/assets/img/thumbnails/underwater-cover.jpg"
-                    alt=""
+                    src="./src/assets/img/thumbnails/underwater-cover.webp"
+                    alt="Album cover for Underwater"
                   />
                   <div
                     class="playlist-content-discography-list-item-informations"
@@ -656,10 +692,13 @@
               class="button-icon button-icon--small button-icon--transparent"
               id="close-related"
             >
-              <img src="./src/assets/icons/close-outlined-gray.svg" alt="" />
+              <img
+                src="./src/assets/icons/close-outlined-gray.svg"
+                alt="Close icon (gray)"
+              />
               <img
                 src="./src/assets/icons/close-outlined-white.svg"
-                alt=""
+                alt="Close icon (white)"
                 class="button-icon-hovered-img"
               />
             </button>
@@ -667,8 +706,8 @@
           <ul class="related-list">
             <li class="related-list-item">
               <img
-                src="./src/assets/img/thumbnails/underwater-cover.jpg"
-                alt=""
+                src="./src/assets/img/thumbnails/underwater-cover.webp"
+                alt="Album cover for Flora"
                 class="related-list-item-img"
               />
               <div class="related-list-item-informations">
@@ -686,11 +725,11 @@
                   >
                     <img
                       src="./src/assets/icons/add-circle-outlined-gray.svg"
-                      alt=""
+                      alt="Add to playlist (gray)"
                     />
                     <img
                       src="./src/assets/icons/add-circle-outlined-white.svg"
-                      alt=""
+                      alt="Add to playlist (white)"
                       class="button-icon-hovered-img"
                     />
                   </button>
@@ -699,11 +738,11 @@
                   >
                     <img
                       src="./src/assets/icons/more-horiz-outlined-gray.svg"
-                      alt=""
+                      alt="More icon (gray)"
                     />
                     <img
                       src="./src/assets/icons/more-horiz-outlined-white.svg"
-                      alt=""
+                      alt="More icon (white)"
                       class="button-icon-hovered-img"
                     />
                   </button>
@@ -712,8 +751,8 @@
             </li>
             <li class="related-list-item">
               <img
-                src="./src/assets/img/thumbnails/the-summer-portraits-cover.jpg"
-                alt=""
+                src="./src/assets/img/thumbnails/the-summer-portraits-cover.webp"
+                alt="Album cover for Rose Bay"
                 class="related-list-item-img"
               />
               <div class="related-list-item-informations">
@@ -731,11 +770,11 @@
                   >
                     <img
                       src="./src/assets/icons/add-circle-outlined-gray.svg"
-                      alt=""
+                      alt="Add to playlist (gray)"
                     />
                     <img
                       src="./src/assets/icons/add-circle-outlined-white.svg"
-                      alt=""
+                      alt="Add to playlist (white)"
                       class="button-icon-hovered-img"
                     />
                   </button>
@@ -744,11 +783,11 @@
                   >
                     <img
                       src="./src/assets/icons/more-horiz-outlined-gray.svg"
-                      alt=""
+                      alt="More icon (gray)"
                     />
                     <img
                       src="./src/assets/icons/more-horiz-outlined-white.svg"
-                      alt=""
+                      alt="More icon (white)"
                       class="button-icon-hovered-img"
                     />
                   </button>
@@ -757,8 +796,8 @@
             </li>
             <li class="related-list-item">
               <img
-                src="./src/assets/img/thumbnails/in-a-time-lapse-cover.jpg"
-                alt=""
+                src="./src/assets/img/thumbnails/in-a-time-lapse-cover.webp"
+                alt="Album cover for Time Lapse"
                 class="related-list-item-img"
               />
               <div class="related-list-item-informations">
@@ -776,11 +815,11 @@
                   >
                     <img
                       src="./src/assets/icons/add-circle-outlined-gray.svg"
-                      alt=""
+                      alt="Add to playlist (gray)"
                     />
                     <img
                       src="./src/assets/icons/add-circle-outlined-white.svg"
-                      alt=""
+                      alt="Add to playlist (white)"
                       class="button-icon-hovered-img"
                     />
                   </button>
@@ -789,11 +828,11 @@
                   >
                     <img
                       src="./src/assets/icons/more-horiz-outlined-gray.svg"
-                      alt=""
+                      alt="More icon (gray)"
                     />
                     <img
                       src="./src/assets/icons/more-horiz-outlined-white.svg"
-                      alt=""
+                      alt="More icon (white)"
                       class="button-icon-hovered-img"
                     />
                   </button>
@@ -806,8 +845,8 @@
       <section class="player">
         <div class="player-music">
           <img
-            src="./src/assets/img/thumbnails/in-a-time-lapse-cover.jpg"
-            alt=""
+            src="./src/assets/img/thumbnails/in-a-time-lapse-cover.webp"
+            alt="Album cover for Experience"
             class="player-music-img"
           />
           <div class="player-music-informations">
@@ -819,10 +858,13 @@
           <button
             class="button-icon button-icon--small button-icon--transparent"
           >
-            <img src="./src/assets/icons/add-circle-outlined-gray.svg" alt="" />
+            <img
+              src="./src/assets/icons/add-circle-outlined-gray.svg"
+              alt="Add to playlist (gray)"
+            />
             <img
               src="./src/assets/icons/add-circle-outlined-white.svg"
-              alt=""
+              alt="Add to playlist (white)"
               class="button-icon-hovered-img"
             />
           </button>
@@ -832,10 +874,13 @@
             <button
               class="button-icon button-icon--small button-icon--transparent player-controls-actions-btn"
             >
-              <img src="./src/assets/icons/shuffle-filled-white.svg" alt="" />
               <img
                 src="./src/assets/icons/shuffle-filled-white.svg"
-                alt=""
+                alt="Shuffle icon (white)"
+              />
+              <img
+                src="./src/assets/icons/shuffle-filled-white.svg"
+                alt="Shuffle icon (white)"
                 class="button-icon-hovered-img"
               />
             </button>
@@ -844,11 +889,11 @@
             >
               <img
                 src="./src/assets/icons/skip-previous-filled-white.svg"
-                alt=""
+                alt="Skip previous icon (white)"
               />
               <img
                 src="./src/assets/icons/skip-previous-filled-white.svg"
-                alt=""
+                alt="Skip previous icon (white)"
                 class="button-icon-hovered-img"
               />
             </button>
@@ -857,11 +902,11 @@
             >
               <img
                 src="./src/assets/icons/play-circle-filled-white.svg"
-                alt=""
+                alt="Play icon (white)"
               />
               <img
                 src="./src/assets/icons/play-circle-filled-white.svg"
-                alt=""
+                alt="Play icon (white)"
                 class="button-icon-hovered-img"
               />
             </button>
@@ -870,31 +915,37 @@
             >
               <img
                 src="./src/assets/icons/pause-circle-filled-white.svg"
-                alt=""
+                alt="Pause icon (white)"
               />
               <img
                 src="./src/assets/icons/pause-circle-filled-white.svg.svg"
-                alt=""
+                alt="Pause icon (white)"
                 class="button-icon-hovered-img"
               />
             </button> -->
             <button
               class="button-icon button-icon--small button-icon--transparent player-controls-actions-btn player-controls-actions-btn--medium"
             >
-              <img src="./src/assets/icons/skip-next-filled-white.svg" alt="" />
               <img
                 src="./src/assets/icons/skip-next-filled-white.svg"
-                alt=""
+                alt="Skip next icon (white)"
+              />
+              <img
+                src="./src/assets/icons/skip-next-filled-white.svg"
+                alt="Skip next icon (white)"
                 class="button-icon-hovered-img"
               />
             </button>
             <button
               class="button-icon button-icon--small button-icon--transparent player-controls-actions-btn"
             >
-              <img src="./src/assets/icons/replay-filled-white.svg" alt="" />
               <img
                 src="./src/assets/icons/replay-filled-white.svg"
-                alt=""
+                alt="Replay icon (white)"
+              />
+              <img
+                src="./src/assets/icons/replay-filled-white.svg"
+                alt="Replay icon (white)"
                 class="button-icon-hovered-img"
               />
             </button>
@@ -911,11 +962,11 @@
           >
             <img
               src="./src/assets/icons/video-library-outlined-white.svg"
-              alt=""
+              alt="Video library icon (white)"
             />
             <img
               src="./src/assets/icons/video-library-outlined-white.svg"
-              alt=""
+              alt="Video library icon (white)"
               class="button-icon-hovered-img"
             />
           </button>
@@ -924,11 +975,11 @@
           >
             <img
               src="./src/assets/icons/horizontal-split-filled-white.svg"
-              alt=""
+              alt="Waiting list icon (white)"
             />
             <img
               src="./src/assets/icons/horizontal-split-filled-white.svg"
-              alt=""
+              alt="Waiting list icon (white)"
               class="button-icon-hovered-img"
             />
           </button>
@@ -937,37 +988,42 @@
           >
             <img
               src="./src/assets/icons/speaker-group-outlined-white.svg"
-              alt=""
+              alt="Devices list icon (white)"
             />
             <img
               src="./src/assets/icons/speaker-group-outlined-white.svg"
-              alt=""
+              alt="Devices list icon (white)"
               class="button-icon-hovered-img"
             />
           </button>
           <button
             class="button-icon button-icon--small button-icon--transparent"
           >
-            <img src="./src/assets/icons/volume-up-outlined-white.svg" alt="" />
             <img
               src="./src/assets/icons/volume-up-outlined-white.svg"
-              alt=""
+              alt="Volume icon (white)"
+            />
+            <img
+              src="./src/assets/icons/volume-up-outlined-white.svg"
+              alt="Volume icon (white)"
               class="button-icon-hovered-img"
             />
           </button>
           <button
             class="button-icon button-icon--small button-icon--transparent"
           >
-            <img src="./src/assets/icons/full-screen-filled-white.svg" alt="" />
             <img
               src="./src/assets/icons/full-screen-filled-white.svg"
-              alt=""
+              alt="Fullscreen icon (white)"
+            />
+            <img
+              src="./src/assets/icons/full-screen-filled-white.svg"
+              alt="Fullscreen icon (white)"
               class="button-icon-hovered-img"
             />
           </button>
         </div>
       </section>
     </main>
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

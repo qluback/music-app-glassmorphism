@@ -4,7 +4,8 @@
 @use "./common.scss";
 
 body {
-  background-image: url("../assets/img/tyler-lastovich-R3ug0_IU64M-unsplash\ 1.png");
+  // background-image: url("../assets/img/tyler-lastovich-R3ug0_IU64M-unsplash\ 1.png");
+  background-image: url("../assets/img/background.webp");
   background-repeat: no-repeat;
   background-position: center;
   // background-size: 110% 110%;
@@ -467,7 +468,7 @@ main {
       padding: 1.5rem;
       // min-height: 18rem;
       aspect-ratio: 3 / 1;
-      background-image: url("../assets/img/einaudi-hero.png");
+      background-image: url("../assets/img/einaudi-hero.webp");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;

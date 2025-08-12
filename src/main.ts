@@ -1,5 +1,13 @@
 import "./styles/index.scss";
 
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    preloader.classList.add("hidden");
+    // setTimeout(() => preloader.remove(), 500);
+  }
+});
+
 let targetX = 50,
   targetY = 50;
 
