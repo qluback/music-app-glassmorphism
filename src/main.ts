@@ -52,6 +52,8 @@ document
   );
 
 document.querySelector("#close-related")?.addEventListener("click", () => {
-  const container = document.querySelector(".related") as HTMLElement;
-  container.style.display = "none";
+  const containerRelated = document.querySelector(".related") as HTMLElement;
+  containerRelated.style.display = "none";
+  const containerPlaylist = document.querySelector(".playlist") as HTMLElement;
+  containerPlaylist.classList.add("expanded");
 });
