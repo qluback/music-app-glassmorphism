@@ -4,7 +4,7 @@ Responsive made only for screens larger than 1280px.
 
 [Demo link](https://qluback-music-app-glassmorphism.netlify.app/)
 
-![Preview project](./preview.jpg)
+![Preview project](./preview1.jpg)
 
 Template made by [Eshika Eshika](https://www.behance.net/gallery/231463977/Glassmorphism?tracking_source=search_projects|glassmorphism&l=86)<br>
 
