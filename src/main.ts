@@ -52,5 +52,6 @@ document
   );
 
 document.querySelector("#close-related")?.addEventListener("click", () => {
-  document.querySelector(".related").style.display = "none";
+  const container = document.querySelector(".related") as HTMLElement;
+  container.style.display = "none";
 });
