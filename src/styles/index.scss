@@ -17,12 +17,12 @@ body {
   // font-weight: 500;
   font-size: 1.5rem;
   color: $white;
-  margin: 0 3rem;
+  margin: 1rem 3rem;
   transition: background-position 0.2s ease-out;
 
   @media (max-width: 1440px) {
     gap: 1rem;
-    margin: 0 1rem;
+    margin: 1rem;
   }
 
   &:not(.hidden) {
@@ -147,7 +147,8 @@ main {
 
 .dashboard {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  // grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: auto 1fr auto;
   gap: 2.5rem;
   background: rgba(53, 59, 64, 0.5);
   backdrop-filter: blur(10px);
@@ -158,6 +159,10 @@ main {
   transition: all 0.5s ease;
   width: 100%;
   overflow: auto;
+
+  @media (max-width: 1280px) {
+    padding: 2rem 2rem 0;
+  }
 
   @media (max-width: 1600px) {
     gap: 1rem;
@@ -184,11 +189,15 @@ main {
   }
 
   .menu {
-    grid-column: 1 / span 3;
+    // grid-column: 1 / span 3;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     overflow: auto;
+
+    @media (max-width: 1024px) {
+      grid-column: 1 / span 4;
+    }
 
     @media (max-width: 1600px) {
       gap: 1rem;
@@ -297,7 +306,13 @@ main {
             align-items: center;
             height: 100%;
 
-            button {
+            &.active {
+              .menu-library-header-filters-select-options {
+                display: flex;
+              }
+            }
+
+            &-btn {
               display: flex;
               align-items: center;
               font-size: 1.125rem;
@@ -311,7 +326,7 @@ main {
               }
             }
             &-options {
-              display: flex;
+              display: none;
               flex-direction: column;
               position: absolute;
               top: 3rem;
@@ -337,6 +352,10 @@ main {
 
                   &.active {
                     color: $green;
+
+                    img {
+                      display: block;
+                    }
                   }
 
                   transition: background 0.3s ease;
@@ -348,6 +367,7 @@ main {
                   span {
                   }
                   img {
+                    display: none;
                   }
                 }
               }
@@ -410,11 +430,15 @@ main {
   }
 
   .playlist {
-    grid-column: 4 / span 6;
+    // grid-column: 4 / span 6;
     padding-left: 0;
     padding-right: 0;
     overflow: auto;
     clip-path: inset(0 round 20px 20px 0 0);
+
+    @media (max-width: 1024px) {
+      grid-column: 5 / -1;
+    }
 
     &-nav {
       display: flex;
@@ -443,7 +467,6 @@ main {
       gap: 0.75rem;
       font-size: 1rem;
       font-weight: 500;
-      background: red;
       padding: 1.5rem;
       // min-height: 18rem;
       aspect-ratio: 3 / 1;
@@ -519,6 +542,16 @@ main {
               display: flex;
               align-items: center;
               gap: 0.5rem;
+              flex: 1;
+              min-width: 0;
+
+              h3 {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                max-width: 100%;
+              }
 
               img {
                 width: 3rem;
@@ -624,11 +657,15 @@ main {
   }
 
   .related {
-    grid-column: 10 / span 3;
+    // grid-column: 10 / span 3;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     overflow: auto;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
 
     &-header {
       display: flex;
@@ -705,6 +742,10 @@ main {
   // overflow: auto;
   background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
+
+  @media (max-width: 1280px) {
+    padding: 2rem;
+  }
 
   @media (max-width: 1600px) {
     gap: 1rem;
